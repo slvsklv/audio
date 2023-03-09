@@ -1,0 +1,39 @@
+﻿<Window x:Class="audio.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:audio"
+        mc:Ignorable="d"
+        Title="Audio Player" Width="800" Height="600">
+    <Grid>
+  
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="Audio Player" FontSize="24" Margin="10" />
+
+    
+        <Grid Grid.Row="1">
+       
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Orientation="Vertical" Margin="10">
+                <Button Content="открыть папку" Margin="0,0,0,10" />
+                <Button Content="прошлое" Margin="0,0,0,10" />
+                <Button Content="пауза" Margin="0,0,0,10" />
+                <Button Content="следующее" Margin="0,0,0,10" />
+                <Button Content="повтор" Margin="0,0,0,10" />
+                <Button Content="перемешать" Margin="0,0,0,10" />
+                <Slider Margin="0,10,0,0" />
+                <TextBlock Margin="0,10,0,0" Text="0:00 / 3:42" />
+            </StackPanel>
+
+           
+            <ListBox Grid.Column="1" Margin="10" />
+        </Grid>
+    </Grid>
+</Window>
